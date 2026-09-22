@@ -2,6 +2,7 @@
 name: aide-memoire
 description: Aide-mémoire de Claude Code. Quelle brique utiliser (CLAUDE.md, skill, hook, MCP, sous-agent, équipe d'agents, plugin), quelles commandes connaître, comment choisir entre travailler seul, avec des sous-agents ou en équipe, et comment formuler une demande. À utiliser quand l'utilisateur hésite sur l'outil ou la méthode, cherche une commande, ou avant de lancer plusieurs agents.
 argument-hint: "[briques | commandes | agents | demandes]"
+allowed-tools: Read
 ---
 
 # Aide-mémoire Claude Code
