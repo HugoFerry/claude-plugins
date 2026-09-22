@@ -19,12 +19,14 @@ Prérequis : Node.js, utilisé par le hook et par le script de `bilan`.
 ## Installer
 
 ```bash
-claude plugin marketplace add anthropics/claude-plugins-official
+claude plugin marketplace add https://github.com/anthropics/claude-plugins-official.git
 claude plugin marketplace add https://github.com/HugoFerry/kit-hugo.git
 claude plugin install kit-hugo@hugo
 ```
 
-La première commande n'est utile que si la marketplace officielle n'est pas encore déclarée ; elle fournit les dépendances du kit. Le kit se met ensuite à jour tout seul.
+- **La première commande** n'est utile que si la marketplace officielle n'est pas encore déclarée. C'est elle qui fournit les dépendances du kit. Garde l'adresse HTTPS complète : la forme courte `anthropics/claude-plugins-official` passe par SSH et échoue sans clé SSH.
+- **Ensuite**, le kit se met à jour tout seul.
+- **Sous Windows**, si l'installation échoue avec « Filename too long », le dossier de configuration de Claude est trop profond : Windows limite les chemins à 260 caractères.
 
 ## Faire évoluer le kit
 
