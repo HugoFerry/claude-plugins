@@ -10,9 +10,17 @@ Mon kit Claude Code, réutilisable dans tous mes projets.
 | Skill `/kit-hugo:demarrer-projet` | Mettre en place un projet, neuf ou existant : CLAUDE.md, permissions, hooks, agents propres au projet. Lancé seulement par l'utilisateur | Fait |
 | Skill `/kit-hugo:bilan` | Repérer, à partir des sessions et de l'historique git, ce qui mérite de devenir un skill, un hook, un agent ou une partie du kit, et ce qui ne sert plus. Lancé seulement par l'utilisateur | Fait |
 | Agents `relecteur` et `verificateur` | `relecteur` (Sonnet) relit du code sans le modifier. `verificateur` (Haiku) lance tests, typecheck, lint et build, et ne rend que les échecs | Fait |
-| Hook de protection | Empêcher la modification des fichiers secrets | À faire |
+| Hook `proteger-secrets` | Empêche Claude de lire ou de modifier un fichier secret (`.env`, clés, keystores, identifiants), avec un outil comme dans le terminal. Les modèles comme `.env.example` restent lisibles | Fait |
 
 S'installent avec le kit : `claude-code-setup` et `claude-md-management` (marketplace officielle d'Anthropic).
+
+Prérequis : Node.js, utilisé par le hook et par le script de `bilan`.
+
+## Tests
+
+```bash
+node tests/proteger-secrets/lancer.mjs
+```
 
 ## Tester en local
 

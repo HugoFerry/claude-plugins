@@ -1,0 +1,17 @@
+{
+  "description": "kit-hugo : empêche Claude de lire ou de modifier les fichiers secrets (.env, clés, keystores, identifiants)",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|MultiEdit|NotebookEdit|Grep|Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/proteger-secrets.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
