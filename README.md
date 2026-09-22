@@ -7,9 +7,9 @@ Mon kit Claude Code, réutilisable dans tous mes projets.
 | Élément | Rôle | État |
 |---|---|---|
 | Skill `/kit-hugo:aide-memoire` | Les briques de Claude Code, les commandes utiles, le choix entre travailler seul, avec des sous-agents ou en équipe, la façon de formuler une demande | Fait |
-| Skill `/kit-hugo:demarrer-projet` | Mettre en place un projet : CLAUDE.md, permissions, hooks, agents | À faire |
-| Skill `/kit-hugo:bilan` | Repérer ce qui mérite de devenir un skill, un hook, un agent ou une partie du kit | À faire |
-| Agents `relecteur` et `verificateur` | Relire le code, lancer les vérifications | À faire |
+| Skill `/kit-hugo:demarrer-projet` | Mettre en place un projet, neuf ou existant : CLAUDE.md, permissions, hooks, agents propres au projet. Lancé seulement par l'utilisateur | Fait |
+| Skill `/kit-hugo:bilan` | Repérer, à partir des sessions et de l'historique git, ce qui mérite de devenir un skill, un hook, un agent ou une partie du kit, et ce qui ne sert plus. Lancé seulement par l'utilisateur | Fait |
+| Agents `relecteur` et `verificateur` | `relecteur` (Sonnet) relit du code sans le modifier. `verificateur` (Haiku) lance tests, typecheck, lint et build, et ne rend que les échecs | Fait |
 | Hook de protection | Empêcher la modification des fichiers secrets | À faire |
 
 S'installent avec le kit : `claude-code-setup` et `claude-md-management` (marketplace officielle d'Anthropic).
