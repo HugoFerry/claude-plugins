@@ -5,7 +5,7 @@
   { "attendu": "bloqué", "entree": { "tool_name": "Write", "tool_input": { "file_path": "android/app/release.keystore" } } },
   { "attendu": "bloqué", "entree": { "tool_name": "Read", "tool_input": { "file_path": "certs/serveur.pem" } } },
   { "attendu": "bloqué", "entree": { "tool_name": "Read", "tool_input": { "file_path": "/home/hugo/.ssh/id_ed25519" } } },
-  { "attendu": "bloqué", "entree": { "tool_name": "Read", "tool_input": { "file_path": "C:\\Users\\hugof\\.claude\\.credentials.json" } } },
+  { "attendu": "bloqué", "entree": { "tool_name": "Read", "tool_input": { "file_path": "C:\\Users\\moi\\.claude\\.credentials.json" } } },
   { "attendu": "bloqué", "entree": { "tool_name": "Grep", "tool_input": { "pattern": "API_KEY", "path": ".env" } } },
   { "attendu": "bloqué", "entree": { "tool_name": "Bash", "tool_input": { "command": "cat .env" } } },
   { "attendu": "bloqué", "entree": { "tool_name": "Bash", "tool_input": { "command": "grep API_KEY ./.env.local | head -1" } } },
