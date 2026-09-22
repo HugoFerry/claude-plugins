@@ -6,7 +6,7 @@ Mon kit Claude Code, réutilisable dans tous mes projets.
 
 | Élément | Rôle | État |
 |---|---|---|
-| Skill `/kit-hugo:aide-memoire` | Les briques de Claude Code, les commandes utiles, le choix entre travailler seul, avec des sous-agents ou en équipe | À faire |
+| Skill `/kit-hugo:aide-memoire` | Les briques de Claude Code, les commandes utiles, le choix entre travailler seul, avec des sous-agents ou en équipe, la façon de formuler une demande | Fait |
 | Skill `/kit-hugo:demarrer-projet` | Mettre en place un projet : CLAUDE.md, permissions, hooks, agents | À faire |
 | Skill `/kit-hugo:bilan` | Repérer ce qui mérite de devenir un skill, un hook, un agent ou une partie du kit | À faire |
 | Agents `relecteur` et `verificateur` | Relire le code, lancer les vérifications | À faire |
@@ -16,8 +16,19 @@ S'installent avec le kit : `claude-code-setup` et `claude-md-management` (market
 
 ## Tester en local
 
+Sans installation, pour une session :
+
 ```bash
 claude --plugin-dir ./plugins/kit-hugo
+```
+
+Installé depuis ce dossier (c'est le cas sur le PC de Hugo), puis mis à jour après chaque modification :
+
+```bash
+claude plugin marketplace add C:/HugoProjects/kit-hugo
+claude plugin install kit-hugo@hugo
+claude plugin marketplace update hugo
+claude plugin update kit-hugo@hugo
 ```
 
 ## Installer depuis GitHub
