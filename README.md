@@ -22,14 +22,14 @@ Sans installation, pour une session :
 claude --plugin-dir ./plugins/kit-hugo
 ```
 
-Installé depuis ce dossier (c'est le cas sur le PC de Hugo), puis mis à jour après chaque modification :
+Installé depuis ce dossier (c'est le cas sur le PC de Hugo) :
 
 ```bash
 claude plugin marketplace add C:/HugoProjects/kit-hugo
 claude plugin install kit-hugo@hugo
-claude plugin marketplace update hugo
-claude plugin update kit-hugo@hugo
 ```
+
+Le plugin est alors lu directement dans ce dossier : une modification s'applique à la session suivante, sans réinstaller.
 
 ## Installer depuis GitHub
 
