@@ -1,5 +1,5 @@
 {
-  "description": "kit-hugo : empêche Claude de lire ou de modifier les fichiers secrets (.env, clés, keystores, identifiants)",
+  "description": "hugo-fy : empêche Claude de lire ou de modifier les fichiers secrets (.env, clés, keystores, identifiants)",
   "hooks": {
     "PreToolUse": [
       {

@@ -24,7 +24,7 @@ Demande : $ARGUMENTS
 
 - Les règles personnelles de l'utilisateur sont déjà dans `~/.claude/CLAUDE.md` : ne les recopie pas dans le projet.
 - Le kit fournit déjà, dans tous les projets, les agents `relecteur` et `verificateur` ainsi que la protection des fichiers secrets : ne les recrée pas.
-- Pas de skill au départ : les skills naissent de l'usage (`/kit-hugo:bilan`), sauf pour une procédure déjà connue et répétitive.
+- Pas de skill au départ : les skills naissent de l'usage (`/hugo-fy:bilan`), sauf pour une procédure déjà connue et répétitive.
 - N'écris rien avant d'avoir présenté le plan et obtenu l'accord. En mode non interactif, arrête-toi après le plan.
 - Ne commite et ne pousse rien sans demande.
 - Si un CLAUDE.md ou un `.claude/` existe déjà, complète-les sans écraser ce qui s'y trouve.
@@ -50,4 +50,4 @@ Demande : $ARGUMENTS
    - Un tableau de ce qui a été créé, avec la raison de chaque élément.
    - Ce qui n'a pas pu être vérifié.
    - Un message de commit proposé.
-   - Un rappel : lancer `/kit-hugo:bilan` après quelques sessions de travail.
+   - Un rappel : lancer `/hugo-fy:bilan` après quelques sessions de travail.

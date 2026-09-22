@@ -1,7 +1,7 @@
 // Résume l'activité récente du projet courant, sans rien modifier : les demandes de
 // l'utilisateur dans les sessions Claude Code (texte tronqué), les skills, agents et
 // commandes utilisés, et l'historique git des 30 derniers jours.
-// Sert de matière première à /kit-hugo:bilan.
+// Sert de matière première à /hugo-fy:bilan.
 // Usage : node resume-sessions.mjs [nombre de sessions, 20 par défaut]
 import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';

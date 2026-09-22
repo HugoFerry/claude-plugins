@@ -1,5 +1,5 @@
 {
-  "name": "hugo",
+  "name": "hugoferry",
   "description": "Les plugins Claude Code de Hugo Ferry.",
   "owner": {
     "name": "Hugo Ferry"
@@ -7,9 +7,9 @@
   "allowCrossMarketplaceDependenciesOn": ["claude-plugins-official"],
   "plugins": [
     {
-      "name": "kit-hugo",
-      "source": "./plugins/kit-hugo",
-      "description": "Mon kit Claude Code : démarrer un projet proprement, repérer ce qui mérite d'être automatisé, aide-mémoire."
+      "name": "hugo-fy",
+      "source": "./plugins/hugo-fy",
+      "description": "Mon kit Claude Code : démarrer un projet proprement, repérer ce qui mérite d'être automatisé, publier ses évolutions, aide-mémoire, protection des secrets."
     }
   ]
 }

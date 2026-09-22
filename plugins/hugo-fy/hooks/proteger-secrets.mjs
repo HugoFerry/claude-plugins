@@ -1,4 +1,4 @@
-// Hook PreToolUse de kit-hugo : empêche Claude de lire ou de modifier un fichier secret
+// Hook PreToolUse de hugo-fy : empêche Claude de lire ou de modifier un fichier secret
 // (.env, clés privées, keystores, identifiants), que ce soit avec un outil de fichiers
 // ou dans une commande du terminal. Le code de sortie 2 bloque l'action et transmet
 // le message à Claude. Dans le doute (entrée illisible), le hook laisse passer.
@@ -37,7 +37,7 @@ if (typeof outil.command === 'string') {
 const secret = cibles.find(estSecret);
 if (secret) {
   process.stderr.write(
-    `Accès refusé par kit-hugo : « ${secret} » est un fichier secret (clés, mots de passe). ` +
+    `Accès refusé par hugo-fy : « ${secret} » est un fichier secret (clés, mots de passe). ` +
       `Ne le lis pas et ne le modifie pas, par aucun moyen (outil ou terminal). ` +
       `Si l'opération est nécessaire, explique à l'utilisateur ce qu'il doit faire lui-même.\n`,
   );

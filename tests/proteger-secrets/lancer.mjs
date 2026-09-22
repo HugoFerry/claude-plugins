@@ -6,7 +6,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ici = dirname(fileURLToPath(import.meta.url));
-const hook = join(ici, '..', '..', 'plugins', 'kit-hugo', 'hooks', 'proteger-secrets.mjs');
+const hook = join(ici, '..', '..', 'plugins', 'hugo-fy', 'hooks', 'proteger-secrets.mjs');
 const cas = JSON.parse(readFileSync(join(ici, 'cas.json'), 'utf8'));
 
 let echecs = 0;

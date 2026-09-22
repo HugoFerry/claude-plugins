@@ -29,13 +29,13 @@ Les commandes comptées sont celles que Claude a lancées, souvent pour explorer
 | Un commit de correction juste après un oubli (tests, lint, version) | Un hook (`PostToolUse` ou `Stop`) |
 | Une tâche qui lit beaucoup pour une réponse courte, ou une relecture qui revient | Un sous-agent |
 | Des commandes sans risque lancées souvent | Des permissions `allow`, ou `/fewer-permission-prompts` |
-| Un élément du projet utile ailleurs | Le remonter dans kit-hugo |
+| Un élément du projet utile ailleurs | Le remonter dans le plugin hugo-fy |
 | Un skill, un agent ou un plugin jamais utilisé | Le supprimer ou le désactiver : il coûte du contexte à chaque session |
 | Une règle de CLAUDE.md que le code contredit | La corriger, avec l'aide de `claude-md-management:claude-md-improver` |
 
 ## Déroulé
 
-1. **Lire.** Parcours la matière première, puis la configuration actuelle pour ne proposer aucun doublon : CLAUDE.md, `.claude/` (skills, agents, `settings.json`) et le contenu du kit (`claude plugin details kit-hugo`). Pour examiner une session en détail, confie la lecture à un sous-agent : les fichiers de session sont volumineux.
+1. **Lire.** Parcours la matière première, puis la configuration actuelle pour ne proposer aucun doublon : CLAUDE.md, `.claude/` (skills, agents, `settings.json`) et le contenu du kit (`claude plugin details hugo-fy`). Pour examiner une session en détail, confie la lecture à un sous-agent : les fichiers de session sont volumineux.
 2. **Proposer.** Au plus sept propositions, classées par gain, dans un tableau avec, pour chacune :
    - le type ;
    - la preuve : une citation ou un chiffre tiré de la matière première ;

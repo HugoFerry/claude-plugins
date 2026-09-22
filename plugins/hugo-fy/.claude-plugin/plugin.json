@@ -1,0 +1,13 @@
+{
+  "name": "hugo-fy",
+  "description": "Mon kit Claude Code : démarrer un projet proprement, repérer ce qui mérite d'être automatisé, publier ses évolutions, aide-mémoire, protection des secrets.",
+  "version": "0.2.0",
+  "homepage": "https://github.com/HugoFerry/claude-plugins",
+  "author": {
+    "name": "Hugo Ferry"
+  },
+  "dependencies": [
+    { "name": "claude-code-setup", "marketplace": "claude-plugins-official" },
+    { "name": "claude-md-management", "marketplace": "claude-plugins-official" }
+  ]
+}
