@@ -12,21 +12,18 @@ Demande : $ARGUMENTS
 
 ## État du dépôt
 
-!`git -C "${CLAUDE_SKILL_DIR}" rev-parse --show-toplevel 2>&1 || echo "PAS DE DÉPÔT GIT ICI"`
-
-!`git -C "${CLAUDE_SKILL_DIR}" status --short --branch 2>&1 || echo "-"`
-
-!`git -C "${CLAUDE_SKILL_DIR}" log --oneline -8 2>&1 || echo "-"`
+!`node "${CLAUDE_SKILL_DIR}/scripts/etat-depot.mjs" "${CLAUDE_SKILL_DIR}"`
 
 ## Principes
 
+- Le plugin tourne depuis une copie dans le cache de Claude Code (`~/.claude/plugins/cache/`), qui n'est pas un dépôt : l'en-tête ci-dessus retrouve le dépôt par la marketplace installée depuis un dossier local (`scripts/etat-depot.mjs`).
 - Le numéro de version de `plugins/hugo-fy/.claude-plugin/plugin.json` décide des mises à jour : les autres ordinateurs ne reçoivent une nouvelle version que s'il change.
 - Rien n'est poussé sans l'accord de l'utilisateur. En mode non interactif, arrête-toi avant le push.
 - Au moindre échec (conflit, validation, test), arrête-toi et explique.
 
 ## Étapes
 
-1. **Vérifier le dépôt.** Si la première ligne de l'état ci-dessus dit « PAS DE DÉPÔT GIT ICI », le plugin a été installé depuis GitHub et ne peut pas être modifié sur place. Explique alors comment faire : `git clone https://github.com/HugoFerry/claude-plugins.git`, puis installer le plugin depuis ce dossier (voir le README). Toutes les commandes suivantes se lancent à la racine du dépôt.
+1. **Vérifier le dépôt.** La première ligne de l'état ci-dessus donne le dépôt (`Dépôt : …`) : toutes les commandes suivantes se lancent à sa racine. Si elle dit « PAS DE DÉPÔT GIT ICI », aucun clone local n'est connu : le plugin a été installé depuis GitHub et ne peut pas être modifié sur place. Explique alors comment faire : `git clone https://github.com/HugoFerry/claude-plugins.git`, puis installer le plugin depuis ce dossier (voir le README).
 2. **Récupérer les changements faits ailleurs** avec `git pull --rebase`. En cas de conflit, arrête-toi.
 3. **Faire le point.** Liste les changements depuis la dernière version, à partir de `git log` et `git diff` depuis le dernier commit « Version … ». Déduis-en le type de version, sauf si l'argument le précise :
    - **patch** (0.2.0 vers 0.2.1) : correction, précision d'un texte ;

@@ -58,4 +58,5 @@ claude --plugin-dir ./plugins/hugo-fy
 claude plugin validate .
 claude plugin validate ./plugins/hugo-fy
 node tests/proteger-secrets/lancer.mjs
+node tests/publier/lancer.mjs
 ```
